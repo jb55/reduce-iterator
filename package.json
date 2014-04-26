@@ -1,7 +1,10 @@
 {
   "name": "reduce-generator",
   "description": "reduce yielded values into a single value",
-  "keywords": ["reduce", "generator"],
+  "keywords": [
+    "reduce",
+    "generator"
+  ],
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
     "expect.js": "*",
     "mocha": "*",
     "naturals": "^1.0.0",
+    "range-generator": "0.0.1",
     "take-generator": "^2.0.0"
   }
 }
