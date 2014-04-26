@@ -3,6 +3,8 @@
 
   reduce yielded values into a single value
 
+  [![Build Status](https://travis-ci.org/jb55/reduce-generator.png)](https://travis-ci.org/jb55/reduce-generator)
+
 ## Installation
 
   Install with npm
@@ -23,7 +25,6 @@ var reduced = reduce(range(0, 3), function(acc, x){ return acc + x; })
 // reduced === 3 (0+1+2)
 
 ```
-
 
 ## License
 
