@@ -1,0 +1,23 @@
+{
+  "name": "reduce-generator",
+  "description": "reduce yielded values into a single value",
+  "keywords": ["reduce", "generator"],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jb55/reduce-generator.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony --reporter spec"
+  },
+  "dependencies": {
+    "is-generator": "0.0.3"
+  },
+  "devDependencies": {
+    "expect.js": "*",
+    "mocha": "*",
+    "naturals": "^1.0.0",
+    "take-generator": "^2.0.0"
+  }
+}
