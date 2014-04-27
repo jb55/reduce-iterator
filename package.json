@@ -3,6 +3,7 @@
   "description": "reduce iterated values into a single value",
   "keywords": [
     "reduce",
+    "iterator",
     "generator"
   ],
   "version": "1.0.0",
