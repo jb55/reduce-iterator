@@ -12,8 +12,10 @@ function reduceGeneratorFn(gen, reducer, acc){
   for (let x of gen) {
     if (first) {
       first = false;
-      if (arguments.length < 3)
+      if (arguments.length < 3) {
         prev = x;
+        continue;
+      }
     }
     prev = reducer(prev, x)
   }
