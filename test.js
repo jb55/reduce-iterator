@@ -1,7 +1,7 @@
 'use strict';
 
 let expect = require('expect.js')
-let take = require('take-generator');
+let take = require('take-iterator');
 let range = require('range-generator');
 let reduce = require('./');
 let nats = require('naturals');
@@ -12,20 +12,33 @@ function plus(a, b) {
 
 describe('reduce-generator', function(){
   it('reduces without init value', function(){
-    let zeroToFour = take(nats, 5);
+    let zeroToFour = take(nats(), 5);
     let reduced = reduce(zeroToFour, plus);
     expect(reduced).to.be(10);
   });
 
   it('reduces with init value', function(){
-    let zeroToFour = take(nats, 5);
+    let zeroToFour = take(nats(), 5);
     let reduced = reduce(zeroToFour, plus, 1);
     expect(reduced).to.be(11);
   });
 
+  it('throws with generator function', function(){
+    expect(function(){
+      function* oneToThree(){
+        yield 1;
+        yield 2;
+        yield 3;
+      }
+      let reduced = reduce(oneToThree, plus);
+    }).to.throwException(function(e){
+      expect(e).to.be.a(TypeError);
+    });
+  });
+
   it('reduces with generator object', function(){
-    let zeroToFour = take(nats, 5);
-    let reduced = reduce(zeroToFour(), plus);
+    let zeroToFour = take(nats(), 5);
+    let reduced = reduce(zeroToFour, plus);
     expect(reduced).to.be(10);
   });
 

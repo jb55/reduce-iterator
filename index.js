@@ -1,15 +1,12 @@
 'use strict';
 
-let isGen = require('is-generator');
+module.exports = reduceIterator;
 
-module.exports = reduceGeneratorFn;
-
-function reduceGeneratorFn(gen, reducer, acc){
+function reduceIterator(xs, reducer, acc){
   let first = true;
-  let prev = acc;
-  gen = isGen.fn(gen)? gen() : gen;
+  let prev = acc
 
-  for (let x of gen) {
+  for (let x of xs) {
     if (first) {
       first = false;
       if (arguments.length < 3) {

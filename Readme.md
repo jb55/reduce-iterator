@@ -1,31 +1,31 @@
 
-# reduce-generator
+# reduce-iterator
 
-  reduce yielded values into a single value
+  reduce iterated values into a single value
 
-  [More useful generators](https://github.com/jb55/generators)
+  [More useful iterators](https://github.com/jb55/generators)
 
-  [![Build Status](https://travis-ci.org/jb55/reduce-generator.png)](https://travis-ci.org/jb55/reduce-generator)
+  [![Build Status](https://travis-ci.org/jb55/reduce-iterator.png)](https://travis-ci.org/jb55/reduce-iterator)
 
 ## Installation
 
   Install with npm
 
-    $ npm install reduce-generator
+    $ npm install reduce-iterator
 
 ## Example
 
 ```js
 'use strict';
 
-let reduce = require('reduce-generator');
+let reduce = require('reduce-iterator');
 let nats = require('naturals');
 let range = require('range-generator');
 
-var reduced = reduce(range(0, 3), function(acc, x){ return acc + x; })
+function plus(a, b) { return a + b; }
+var reduced = reduce(range(0, 3), plus)
 
 // reduced === 3 (0+1+2)
-
 ```
 
 ## License
