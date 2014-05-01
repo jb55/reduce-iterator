@@ -5,7 +5,7 @@
 
   [More useful iterators](https://github.com/jb55/generators)
 
-  [![Build Status](https://travis-ci.org/jb55/reduce-iterator.png)](https://travis-ci.org/jb55/reduce-iterator)
+  [![Build Status](https://travis-ci.org/jb55/reduce-iterator.svg)](https://travis-ci.org/jb55/reduce-iterator)
 
 ## Installation
 
